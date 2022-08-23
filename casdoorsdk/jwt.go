@@ -21,7 +21,9 @@ import (
 )
 
 type Claims struct {
-	User
+	Owner       string `json:"owner"`
+	Name        string `json:"name"`
+	Id          string `json:"id"`
 	AccessToken string `json:"accessToken"`
 	jwt.RegisteredClaims
 }
